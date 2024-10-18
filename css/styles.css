@@ -130,6 +130,7 @@ header nav ul li a {
   font-size: 2rem;
   margin-bottom: 10px;
   color: #fff;
+  padding-bottom: 40px;
 }
 
 .media-brands p {
@@ -138,37 +139,14 @@ header nav ul li a {
   color: #fff;
 }
 
-.brand-grid {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr); /* Define 6 colunas para a linha 2 */
-    grid-template-rows:auto; /* Define automaticamente as alturas das linhas */
-    gap: 20px; /* Espaço entre os itens */
-    justify-content: center; /* Centraliza os itens */
-    grid-template-areas: 
-        "a b c d e ."
-        "f g h i j k"
-        "l m n o p ."; /* Define as áreas vazias nas linhas 1 e 3 */
-    justify-items: auto;
+.brand-grid-line-01,
+.brand-grid-line-02,
+.brand-grid-line-03 {
+    display: flex;
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    gap: 60px; /* Espaço entre os itens */
+    margin-bottom: -20px; /* Espaço entre as linhas */
 }
-
-.brand-item:nth-child(1) { grid-area: a; }
-.brand-item:nth-child(2) { grid-area: b; }
-.brand-item:nth-child(3) { grid-area: c; }
-.brand-item:nth-child(4) { grid-area: d; }
-.brand-item:nth-child(5) { grid-area: e; }
-
-.brand-item:nth-child(6) { grid-area: f; }
-.brand-item:nth-child(7) { grid-area: g; }
-.brand-item:nth-child(8) { grid-area: h; }
-.brand-item:nth-child(9) { grid-area: i; }
-.brand-item:nth-child(10) { grid-area: j; }
-.brand-item:nth-child(11) { grid-area: k; }
-
-.brand-item:nth-child(12) { grid-area: l; }
-.brand-item:nth-child(13) { grid-area: m; }
-.brand-item:nth-child(14) { grid-area: n; }
-.brand-item:nth-child(15) { grid-area: o; }
-.brand-item:nth-child(16) { grid-area: p; }
 
 .brand-item {
     width: 120px;
@@ -180,7 +158,6 @@ header nav ul li a {
     border: 2px solid #fff;
     transform: rotate(45deg); /* Rotaciona para criar o efeito de losango */
     overflow: hidden;
-    justify-items: center;
 }
 
 .brand-item img {
@@ -189,19 +166,16 @@ header nav ul li a {
     transform: rotate(-45deg); /* Mantém a imagem reta dentro do losango */
 }
 
-
-/* Para garantir que os itens mantenham sua posição em diferentes tamanhos de tela */
+/* Responsividade: Ajusta o layout para dispositivos menores */
 @media screen and (max-width: 768px) {
-    .brand-grid {
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Adapta o tamanho dos itens para telas menores */
+    .brand-grid-line-01,
+    .brand-grid-line-02,
+    .brand-grid-line-03 {
+        flex-wrap: wrap; /* Permite que os itens se ajustem em várias linhas em telas menores */
+        justify-content: center; /* Mantém os itens centralizados */
     }
 }
 
-
-/* Adiciona deslocamento para as linhas ímpares */
-.brand-item:nth-child(odd) {
-  margin-top: 70px; /* Ajuste o valor conforme necessário para encaixar */
-}
 
 .features {
   background: #f4f4f4;
