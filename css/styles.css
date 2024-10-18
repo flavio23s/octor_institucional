@@ -111,6 +111,7 @@ header nav ul li a {
 .hero-content h1 {
   font-size: 3.0rem;
   margin-bottom: 20px;
+  line-height: 1.2; /* Ajuste este valor conforme necessário */
 }
 
 .hero-content p {
