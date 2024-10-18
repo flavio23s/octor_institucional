@@ -124,6 +124,7 @@ header nav ul li a {
   color: #650c87;
   padding: 40px 0;
   text-align: center;
+  padding-bottom: 80px;
 }
 
 .media-brands h2 {
@@ -131,12 +132,6 @@ header nav ul li a {
   margin-bottom: 10px;
   color: #fff;
   padding-bottom: 40px;
-}
-
-.media-brands p {
-  font-size: 1rem;
-  margin-bottom: 30px;
-  color: #fff;
 }
 
 .brand-grid-line-01,
