@@ -69,17 +69,7 @@ header nav ul li a {
   height: 45px; /* Ajuste a altura conforme necessário */
   width: auto; /* Mantém a proporção da imagem */
 }
-/*inicio*/
-/*.hero {
-    background: url('https://youtu.be/AQmmi4KDv8M') no-repeat center center/cover;
-    color: #5e65bc;
-    height: 600px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-*/
+
 .hero {
   position: relative;
   width: 100%;
@@ -91,14 +81,26 @@ header nav ul li a {
   color: #fff;
 }
 
-#hero-video {
+.video-container {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* O vídeo cobre a área, mantendo a proporção */
   z-index: -1; /* O vídeo fica atrás do conteúdo */
+  overflow: hidden;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 56.25vw; /* Para manter a proporção 16:9 do vídeo */
+  min-height: 100vh;
+  min-width: 100vw;
+  transform: translate(-50%, -50%);
+  pointer-events: none; /* Desativa a interação do usuário com o vídeo */
 }
 
 .hero-content {
@@ -109,9 +111,9 @@ header nav ul li a {
 }
 
 .hero-content h1 {
-  font-size: 3.0rem;
+  font-size: 3rem;
   margin-bottom: 20px;
-  line-height: 1.2; /* Ajuste este valor conforme necessário */
+  line-height: 1.2;
 }
 
 .hero-content p {
@@ -161,40 +163,80 @@ header nav ul li a {
     transform: rotate(-45deg); /* Mantém a imagem reta dentro do losango */
 }
 
-/* Responsividade: Ajusta o layout para dispositivos menores */
-@media screen and (max-width: 768px) {
-    .brand-grid-line-01,
-    .brand-grid-line-02,
-    .brand-grid-line-03 {
-        flex-wrap: wrap; /* Permite que os itens se ajustem em várias linhas em telas menores */
-        justify-content: center; /* Mantém os itens centralizados */
-    }
-}
-
-
-.features {
-  background: #f4f4f4;
-  padding: 40px 0;
-}
-
-.features h2 {
+.offices {
+  background-color: #151934;
+  color: #fff;
+  padding: 40px 20px;
   text-align: center;
-  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
 }
 
-.feature-grid {
+.container {
+  position: relative;
+  z-index: 2; /* Garante que o conteúdo fique por cima da imagem */
+}
+
+.office-details {
   display: flex;
   justify-content: space-between;
+  align-items: center; /* Alinha verticalmente o texto e a imagem */
+  text-align: left;
+  margin-top: 20px;
 }
 
-.feature {
-  background: #fff;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  flex: 1;
-  margin: 0 10px;
+.office-info {
+  width: 45%; /* Aumenta um pouco a largura do texto para melhorar o alinhamento */
 }
+
+.office-info h3 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.office-info p {
+  font-size: 1.2rem; /* Aumenta um pouco o tamanho do texto */
+  margin-bottom: 10px;
+}
+
+.map {
+  width: 45%; /* Ajusta o tamanho do mapa */
+}
+
+.map img {
+  width: 100%;
+  height: auto;
+}
+
+.office-details .map img {
+  filter: brightness(0); /* Faz o mapa ficar com a cor do fundo (escurecido) */
+  transition: filter 0.5s ease; /* Suaviza a transição ao passar o mouse */
+}
+
+.office-details .map img:hover {
+  filter: brightness(1); /* Faz o mapa retornar à cor original ao passar o mouse */
+}
+
+.locations {
+  margin-bottom: 30px;
+}
+
+.continents span, .countries span {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.countries {
+  margin-top: 20px;
+}
+
+.countries span.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
 
 .footer {
     background-color: #151934;
