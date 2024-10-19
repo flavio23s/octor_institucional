@@ -177,6 +177,13 @@ header nav ul li a {
   z-index: 2; /* Garante que o conteúdo fique por cima da imagem */
 }
 
+.offices h2 {
+  font-size: 2rem; /* Ajuste o valor conforme necessário */
+  font-weight: bold; /* Opcional, adiciona peso extra à fonte */
+  margin-bottom: 20px; /* Ajusta o espaçamento inferior, se necessário */
+  color: #fff; /* Garante que o título fique visível sobre o fundo */
+}
+
 .office-details {
   display: flex;
   justify-content: space-between;
@@ -256,8 +263,8 @@ header nav ul li a {
     justify-content: space-between; /* Distribui os elementos (logo e ícones) nos lados opostos */
     align-items: center;  /* Alinha os elementos verticalmente */
     width: 100%;  /* Garante que a largura do conteúdo ocupe 100% */
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 80px;
+    padding-right: 80px;
     padding-top: 10px;
 }
 
