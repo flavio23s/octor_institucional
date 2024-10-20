@@ -586,3 +586,132 @@ button:hover {
   color: #e0e0e0;
 }
 
+@media screen and (max-width: 768px) {
+  /* Ajustes gerais para mobile */
+  body {
+    font-size: 14px; /* Ajusta o tamanho da fonte para dispositivos móveis */
+  }
+
+  /* Cabeçalho */
+  .header-container {
+    flex-direction: column; /* Empilha os itens do cabeçalho */
+    padding: 10px 20px; /* Reduz o espaçamento */
+  }
+
+  .logo a {
+    font-size: 1.2rem; /* Reduz o tamanho da logo */
+  }
+
+  nav ul {
+    flex-direction: column; /* Navegação vertical */
+    gap: 10px; /* Reduz o espaçamento entre os itens */
+    margin-top: 10px; /* Adiciona espaçamento entre o logo e o menu */
+  }
+
+  /* Hero Section */
+  .hero-content h1 {
+    font-size: 2rem; /* Reduz o tamanho da fonte no mobile */
+  }
+
+  .hero-content p {
+    font-size: 1rem; /* Reduz o tamanho do parágrafo */
+  }
+
+  /* Container do vídeo */
+  .video-container iframe {
+    width: 100%; /* Garante que o vídeo se ajuste ao tamanho da tela */
+    height: 56.25vw; /* Mantém a proporção 16:9 */
+  }
+
+  /* Sessão Nosso Ecossistema */
+  .media-brands h2 {
+    font-size: 1.5rem; /* Reduz o tamanho do título */
+  }
+
+  .brand-grid-line-01,
+  .brand-grid-line-02,
+  .brand-grid-line-03 {
+    flex-wrap: wrap; /* Permite que os itens se ajustem em múltiplas linhas */
+    gap: 20px; /* Reduz o espaçamento entre os itens */
+  }
+
+  .brand-item {
+    width: 80px; /* Reduz o tamanho dos losangos */
+    height: 80px;
+  }
+
+  .brand-item img {
+    width: 60%; /* Ajusta o tamanho das imagens */
+  }
+
+  /* Sessão Escritórios */
+  .office-details {
+    flex-direction: column; /* Empilha os detalhes e o mapa */
+    text-align: center;
+  }
+
+  .office-info, .map {
+    width: 100%; /* Ocupa 100% da largura */
+  }
+
+  /* Formulário de Contato */
+  .contact-form {
+    padding: 20px; /* Reduz o padding lateral */
+  }
+
+  /* Rodapé */
+  .footer-content {
+    flex-direction: column; /* Empilha logo e ícones sociais */
+    text-align: center;
+    gap: 20px;
+  }
+
+  .footer-logo {
+    justify-content: center; /* Centraliza a logo */
+  }
+
+  .footer-socials {
+    justify-content: center; /* Centraliza os ícones sociais */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* Ajustes adicionais para telas muito pequenas */
+
+  /* Cabeçalho */
+  .logo a {
+    font-size: 1rem; /* Reduz ainda mais o tamanho da logo */
+  }
+
+  /* Hero Section */
+  .hero-content h1 {
+    font-size: 1.8rem; /* Reduz o tamanho da fonte do título */
+  }
+
+  .hero-content p {
+    font-size: 0.9rem; /* Reduz o tamanho do parágrafo */
+  }
+
+  /* Sessão Nosso Ecossistema */
+  .media-brands h2 {
+    font-size: 1.3rem; /* Reduz o tamanho do título */
+  }
+
+  .brand-item {
+    width: 70px; /* Reduz o tamanho dos losangos para telas pequenas */
+    height: 70px;
+  }
+
+  .brand-item img {
+    width: 50%; /* Reduz o tamanho das imagens */
+  }
+
+  /* Rodapé */
+  .footer-content {
+    gap: 15px; /* Reduz o espaço entre os itens do rodapé */
+  }
+
+  .footer-copyright {
+    padding: 5px; /* Reduz o padding do copyright */
+  }
+}
