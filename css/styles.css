@@ -1,7 +1,10 @@
 * 
-{
+html, body {
   margin: 0;
   padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden; /* Evita rolagem horizontal */
   box-sizing: border-box;
 }
 
@@ -24,50 +27,54 @@ body {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 20px; /* Certifique-se de que o padding não está causando overflow */
 }
+
 /*cabeçalho*/
 header {
-  background: #151934;
-  color: #650c87;
+  background-color: #151934;
   padding: 20px 0;
 }
 
-header .logo a {
-  color: #ffffff;
-  font-size: 1.0rem;
-  text-decoration: none;
-}
-
-header nav ul {
-  list-style: none;
+.header-container {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between; /* Alinha as divs nos lados opostos */
+  align-items: center; /* Alinha os itens verticalmente no centro */
+  max-width: 1200px;
+  margin: 0 auto; /* Centraliza o conteúdo */
+  padding: 0 20px; /* Espaçamento lateral */
 }
 
-header nav ul li {
-  margin-left: 20px;
-}
-
-header nav ul li a {
-  color: #ffffff;
-  text-decoration: none;
-}
 .logo {
   display: flex;
-  align-items: center;
+  align-items: center; /* Alinha o texto e a imagem da logo verticalmente */
 }
 
 .logo a {
   font-size: 1.5rem;
+  color: #fff;
   text-decoration: none;
-  color: #716fb5;
-  margin-right: 10px;
+  margin-right: 10px; /* Espaço entre o texto e a imagem da logo */
 }
 
 .logo img {
-  height: 45px; /* Ajuste a altura conforme necessário */
-  width: auto; /* Mantém a proporção da imagem */
+  height: 45px; /* Ajuste conforme necessário */
+}
+
+nav ul {
+  list-style: none;
+  display: flex; /* Coloca os itens de navegação em linha */
+  gap: 20px; /* Espaçamento entre os itens */
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+nav ul li a:hover {
+  color: #ccc; /* Cor ao passar o mouse */
 }
 
 .hero {
@@ -95,13 +102,13 @@ header nav ul li a {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 100vw;
-  height: 56.25vw; /* Para manter a proporção 16:9 do vídeo */
+  width: 100%; /* Substituído de 100vw para 100% */
+  height: 56.25vw; /* Para manter a proporção 16:9 */
   min-height: 100vh;
-  min-width: 100vw;
   transform: translate(-50%, -50%);
   pointer-events: none; /* Desativa a interação do usuário com o vídeo */
 }
+
 
 .hero-content {
   position: relative;
@@ -120,7 +127,7 @@ header nav ul li a {
   font-size: 1.2rem;
 }
 
-/*Plataformas anunciantes*/
+/* Nosso ecossistema */
 .media-brands {
   background: #151934;
   color: #650c87;
@@ -140,29 +147,192 @@ header nav ul li a {
 .brand-grid-line-01,
 .brand-grid-line-02,
 .brand-grid-line-03 {
-    display: flex;
-    justify-content: center; /* Centraliza os itens horizontalmente */
-    gap: 65px; /* Espaço entre os itens */
-    margin-bottom: -25px; /* Espaço entre as linhas */
+  display: flex;
+  justify-content: center; /* Centraliza os itens horizontalmente */
+  gap: 65px; /* Espaço entre os itens */
+  margin-bottom: -25px; /* Espaço entre as linhas */
 }
 
 .brand-item {
-    width: 120px;
-    height: 120px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #151934;
-    border: 2px solid #fff;
-    transform: rotate(45deg); /* Rotaciona para criar o efeito de losango */
-    overflow: hidden;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #151934;
+  border: 2px solid #fff;
+  transform: rotate(45deg); /* Rotaciona para criar o efeito de losango */
+  overflow: hidden;
+  perspective: 1000px; /* Adiciona perspectiva para o efeito de rotação */
+  position: relative;
+}
+
+.brand-item .front, 
+.brand-item .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backface-visibility: hidden; /* Oculta o lado de trás */
+  transform: rotate(-45deg); /* Mantém a rotação normal das imagens */
+}
+
+.brand-item .back {
+  background-color: #fff; /* Fundo branco para a parte de trás */
+  transform: rotateY(180deg) rotate(-45deg); /* Esconde o verso por padrão */
+  border-radius: 5px; /* Garante que o fundo cubra toda a área de rotação */
+}
+
+.brand-item:hover .front {
+  transform: rotateY(180deg) rotate(-45deg); /* Gira a frente para fora */
+  transition: transform 0.6s;
+}
+
+.brand-item:hover .back {
+  transform: rotateY(0deg) rotate(-45deg); /* Gira o verso para frente */
+  transition: transform 0.6s;
 }
 
 .brand-item img {
-    width: 80%;
-    height: auto;
-    transform: rotate(-45deg); /* Mantém a imagem reta dentro do losango */
+  width: 80%;
+  height: auto;
 }
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+  .brand-grid-line-01,
+  .brand-grid-line-02,
+  .brand-grid-line-03 {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px; /* Reduz o espaço entre os itens em telas menores */
+    margin-bottom: 10px; /* Ajuste de espaçamento entre as linhas */
+  }
+
+  .brand-item {
+    width: 100px;
+    height: 100px; /* Reduz o tamanho dos losangos em telas menores */
+  }
+
+  .brand-item img {
+    width: 70%;
+  }
+}
+
+/* Popup */
+/* Ajustes gerais */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.popup-content {
+  background-color: #4cc5a1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Logo no topo do texto */
+.popup-logo {
+  display: block;
+  width: 200px; /* Ajuste o tamanho conforme necessário */
+  margin: 0 auto 20px; /* Centraliza a logo e adiciona espaçamento inferior */
+}
+
+/* Ajuste do texto */
+.popup-text {
+  width: 55%;
+  padding-left: 20px;
+}
+
+/* Imagem */
+.popup-image {
+  position: absolute;
+  right: 0; /* Colado à direita */
+  top: 50%; /* Centraliza verticalmente */
+  transform: translateY(-50%); /* Ajusta para centralizar a imagem corretamente */
+  width: 40%; /* Defina a largura da imagem conforme necessário */
+  max-width: none; /* Garante que a largura não seja limitada pelo layout geral */
+}
+
+.popup-image img {
+  width: 100%; /* Mantém a imagem dentro do contêiner da .popup-image */
+  height: auto;
+}
+
+
+/* Botões de navegação (setas e fechar) */
+/* Centralizar os botões de navegação verticalmente no lado esquerdo */
+.popup-navigation {
+  position: absolute;
+  left: 20px; /* Posicionar no canto esquerdo */
+  top: 50%; /* Centralizar verticalmente */
+  transform: translateY(-50%); /* Ajustar para manter a centralização vertical */
+  display: flex;
+  flex-direction: column; /* Alinha os botões verticalmente */
+  justify-content: center; /* Centraliza os botões */
+  align-items: center;
+  gap: 20px; /* Espaçamento entre os botões */
+}
+
+.nav-close {
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.nav-arrow {
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.nav-arrow:hover, .nav-close:hover {
+  color: #ccc;
+}
+
+/* Estilizar a logo acima do título */
+.popup-logo {
+  width: 150px; /* Ajuste o tamanho da logo conforme necessário */
+  margin-bottom: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Ajuste o layout do conteúdo */
+.popup-content {
+  background-color: #650c87;
+  padding: 40px;
+  border-radius: 10px;
+  width: 100%; /* Agora ocupa toda a largura */
+  height: 100%; /* Agora ocupa toda a altura */
+  max-width: none; /* Remove qualquer limitação de largura */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  position: relative;
+  overflow: hidden; /* Para garantir que não haja rolagem */
+}
+
 
 .offices {
   background: linear-gradient(to bottom, #2e3b55 20%, #151934 80%); /* Centraliza o efeito mais no topo */
@@ -237,19 +407,10 @@ header nav ul li a {
   cursor: pointer;
 }
 
-.countries {
-  margin-top: 20px;
-}
-
-.countries span.active {
-  font-weight: bold;
-  text-decoration: underline;
-}
-
 .contact-form {
-  background-color: #151934; /* Cor de fundo da seção */
-  color: #fff; /* Cor do texto */
-  padding: 40px 20px;
+  background-color: #151934;
+  color: #fff;
+  padding: 40px 400px;
   text-align: center;
 }
 
@@ -281,11 +442,6 @@ header nav ul li a {
   color: #fff;
 }
 
-.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
-  outline: none;
-  border-color: #5e65bc;
-}
-
 .form-group textarea {
   height: 150px;
 }
@@ -304,29 +460,60 @@ button:hover {
   background-color: #4a557a;
 }
 
+/* Estilos do Pop-up */
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  color: #151934;
+  padding: 20px;
+  border-radius: 8px;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.popup button {
+  margin-top: 10px;
+  background-color: #151934;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.popup button:hover {
+  background-color: #4a557a;
+}
+
+
 
 .footer {
-    background-color: #151934;
+    background-color: #5e65bc;
     color: #fff;
     padding:  0;  /* Remove padding lateral, deixando apenas o padding vertical */
     margin: 0;
     width: 100%;  /* Garante que o rodapé ocupe toda a largura da tela */
 }
-
 .footer .container {
-    max-width: 100%;  /* Garante que o conteúdo ocupe toda a largura */
-    padding: 0 0px;  /* Mantém um pequeno espaçamento interno nas laterais */
+  max-width: 1200px; /* Defina um limite máximo de largura */
+  margin: 0 auto; /* Centraliza o container */
+  padding: 0 20px; /* Espaçamento interno */
 }
+
 
 .footer-content {
-    display: flex;
-    justify-content: space-between; /* Distribui os elementos (logo e ícones) nos lados opostos */
-    align-items: center;  /* Alinha os elementos verticalmente */
-    width: 100%;  /* Garante que a largura do conteúdo ocupe 100% */
-    padding-left: 80px;
-    padding-right: 80px;
-    padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 20px; /* Adiciona espaçamento nas laterais */
 }
+
 
 
 .footer-logo {
@@ -393,17 +580,30 @@ button:hover {
 }
 
 .footer-copyright {
-  background-color: rgb(64, 66, 170)  ;
-  margin-top: 20px;
-  font-size: 1.0rem;
+  background-color: rgb(64, 66, 170);
+  margin-top: 2px;
+  font-size: 1rem;
   text-align: center;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding: 5px 0;
+  width: 100vw; /* Garante que o rodapé ocupe 100% da largura da viewport */
+  box-sizing: border-box;
+  position: relative;
+  left: 50%; /* Centraliza o conteúdo */
+  transform: translateX(-50%); /* Garante que o conteúdo comece na borda esquerda */
 }
+
+.footer-copyright p {
+  margin: 0;
+  padding: 0 20px; /* Adiciona padding interno para o texto */
+  color: #ffffff;
+}
+
 .footer-copyright a {
-  color: #ffffff; /* Define a cor branca */
+  color: #ffffff;
+  text-decoration: none;
 }
 
 .footer-copyright a:hover {
-  color: #e0e0e0; /* Cor opcional ao passar o mouse */
+  color: #e0e0e0;
 }
+
