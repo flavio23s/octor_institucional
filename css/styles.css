@@ -133,7 +133,8 @@ header nav ul li a {
   font-size: 2rem;
   margin-bottom: 10px;
   color: #fff;
-  padding-bottom: 40px;
+  padding-top: 50px;
+  padding-bottom: 80px;
 }
 
 .brand-grid-line-01,
@@ -164,13 +165,14 @@ header nav ul li a {
 }
 
 .offices {
-  background-color: #151934;
+  background: linear-gradient(to bottom, #2e3b55 20%, #151934 80%); /* Centraliza o efeito mais no topo */
   color: #fff;
   padding: 40px 20px;
   text-align: center;
   position: relative;
   overflow: hidden;
 }
+
 
 .container {
   position: relative;
@@ -242,6 +244,64 @@ header nav ul li a {
 .countries span.active {
   font-weight: bold;
   text-decoration: underline;
+}
+
+.contact-form {
+  background-color: #151934; /* Cor de fundo da seção */
+  color: #fff; /* Cor do texto */
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.contact-form h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: #2e3b55;
+  color: #fff;
+}
+
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+  outline: none;
+  border-color: #5e65bc;
+}
+
+.form-group textarea {
+  height: 150px;
+}
+
+button {
+  background-color: #5e65bc;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #4a557a;
 }
 
 
