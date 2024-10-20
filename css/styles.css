@@ -200,27 +200,6 @@ nav ul li a:hover {
   height: auto;
 }
 
-/* Responsividade */
-@media screen and (max-width: 768px) {
-  .brand-grid-line-01,
-  .brand-grid-line-02,
-  .brand-grid-line-03 {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px; /* Reduz o espaço entre os itens em telas menores */
-    margin-bottom: 10px; /* Ajuste de espaçamento entre as linhas */
-  }
-
-  .brand-item {
-    width: 100px;
-    height: 100px; /* Reduz o tamanho dos losangos em telas menores */
-  }
-
-  .brand-item img {
-    width: 70%;
-  }
-}
-
 /* Popup */
 /* Ajustes gerais */
 .popup {
