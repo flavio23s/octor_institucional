@@ -589,7 +589,7 @@ button:hover {
 @media screen and (max-width: 768px) {
   /* Ajustes gerais para mobile */
   body {
-    font-size: 14px; /* Ajusta o tamanho da fonte para dispositivos móveis */
+    font-size: 18px; /* Ajusta o tamanho da fonte para dispositivos móveis */
   }
 
   /* Cabeçalho */
@@ -614,13 +614,13 @@ button:hover {
   }
 
   .hero-content p {
-    font-size: 1rem; /* Reduz o tamanho do parágrafo */
+    font-size: 1.3rem; /* Reduz o tamanho do parágrafo */
   }
 
   /* Container do vídeo */
   .video-container iframe {
     width: 100%; /* Garante que o vídeo se ajuste ao tamanho da tela */
-    height: 56.25vw; /* Mantém a proporção 16:9 */
+    height: 100%; /* Mantém a proporção 16:9 */
   }
 
   /* Sessão Nosso Ecossistema */
@@ -695,11 +695,6 @@ button:hover {
   /* Sessão Nosso Ecossistema */
   .media-brands h2 {
     font-size: 1.3rem; /* Reduz o tamanho do título */
-  }
-
-  .brand-item {
-    width: 70px; /* Reduz o tamanho dos losangos para telas pequenas */
-    height: 70px;
   }
 
   .brand-item img {
