@@ -1,23 +1,23 @@
-* 
-html, body {
+* html,
+body {
   margin: 0;
   padding: 0;
   height: 100%;
   width: 100%;
   overflow-x: hidden; /* Evita rolagem horizontal */
   box-sizing: border-box;
-  font-family: 'Madani Arabic Regular', sans-serif;
+  font-family: "Madani Arabic Regular", sans-serif;
   line-height: 1.6;
 }
 
 @font-face {
-    font-family: 'Madani Arabic Semi Bold';
-    src: url('fonts/madani-arabic-semi-bold.woff2') format('woff2'),
-         url('fonts/madani-arabic-semi-bold.woff') format('woff'),
-         url('fonts/madani-arabic-semi-bold.ttf') format('truetype'),
-         url('fonts/Madani-Arabic-Regular.ttf') format('truetype');
-    font-weight: 600; /* Semi Bold */
-    font-style: normal;
+  font-family: "Madani Arabic Semi Bold";
+  src: url("fonts/madani-arabic-semi-bold.woff2") format("woff2"),
+    url("fonts/madani-arabic-semi-bold.woff") format("woff"),
+    url("fonts/madani-arabic-semi-bold.ttf") format("truetype"),
+    url("fonts/Madani-Arabic-Regular.ttf") format("truetype");
+  font-weight: 600; /* Semi Bold */
+  font-style: normal;
 }
 
 .container {
@@ -29,7 +29,7 @@ html, body {
 /*cabeçalho*/
 header {
   padding: 10px 0;
-  background:rgba(0, 0, 0, 0.2)
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .header-container {
@@ -106,7 +106,6 @@ nav ul li a:hover {
   pointer-events: none; /* Desativa a interação do usuário com o vídeo */
 }
 
-
 .hero-content {
   position: relative;
   z-index: 1;
@@ -126,8 +125,8 @@ nav ul li a:hover {
 
 /* Nosso ecossistema */
 .media-brands {
-  background: #31329a ;
-  color: #650c87;
+  background: #353d7f ;
+  color: #353D7F;
   padding-top: 20px;
   text-align: center;
   padding-bottom: 100px;
@@ -156,7 +155,7 @@ nav ul li a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #31329a;
+  background-color: #353D7F;
   border: 2px solid #fff;
   transform: rotate(45deg); /* Rotaciona para criar o efeito de losango */
   overflow: hidden;
@@ -164,7 +163,7 @@ nav ul li a:hover {
   position: relative;
 }
 
-.brand-item .front, 
+.brand-item .front,
 .brand-item .back {
   position: absolute;
   width: 100%;
@@ -192,15 +191,11 @@ nav ul li a:hover {
 }
 
 .brand-item img {
-  width: 80%;
-  height: auto;
-}
-
-.back img {
   transform: rotate(45deg); /* Rotaciona para criar o efeito de losango */
   width: 100%;
   height: auto;
 }
+
 /* Popup */
 /* Ajustes gerais */
 .popup {
@@ -247,7 +242,9 @@ nav ul li a:hover {
   position: absolute;
   right: 0; /* Colado à direita */
   top: 50%; /* Centraliza verticalmente */
-  transform: translateY(-50%); /* Ajusta para centralizar a imagem corretamente */
+  transform: translateY(
+    -50%
+  ); /* Ajusta para centralizar a imagem corretamente */
   width: 40%; /* Defina a largura da imagem conforme necessário */
   max-width: none; /* Garante que a largura não seja limitada pelo layout geral */
 }
@@ -257,14 +254,15 @@ nav ul li a:hover {
   height: auto;
 }
 
-
 /* Botões de navegação (setas e fechar) */
 /* Centralizar os botões de navegação verticalmente no lado esquerdo */
 .popup-navigation {
   position: absolute;
   left: 20px; /* Posicionar no canto esquerdo */
   top: 50%; /* Centralizar verticalmente */
-  transform: translateY(-50%); /* Ajustar para manter a centralização vertical */
+  transform: translateY(
+    -50%
+  ); /* Ajustar para manter a centralização vertical */
   display: flex;
   flex-direction: column; /* Alinha os botões verticalmente */
   justify-content: center; /* Centraliza os botões */
@@ -284,7 +282,8 @@ nav ul li a:hover {
   cursor: pointer;
 }
 
-.nav-arrow:hover, .nav-close:hover {
+.nav-arrow:hover,
+.nav-close:hover {
   color: #ccc;
 }
 
@@ -313,16 +312,14 @@ nav ul li a:hover {
   overflow: hidden; /* Para garantir que não haja rolagem */
 }
 
-
 .offices {
-  background: #31329a ; /* Centraliza o efeito mais no topo */
+  background: #353d7f; /* Centraliza o efeito mais no topo */
   color: #fff;
   padding: 40px 20px;
   text-align: center;
   position: relative;
   overflow: hidden;
 }
-
 
 .container {
   position: relative;
@@ -373,11 +370,13 @@ nav ul li a:hover {
 }
 
 .office-details .map img:hover {
-  filter: brightness(1); /* Faz o mapa retornar à cor original ao passar o mouse */
+  filter: brightness(
+    1
+  ); /* Faz o mapa retornar à cor original ao passar o mouse */
 }
 
-
-.continents span, .countries span {
+.continents span,
+.countries span {
   display: inline-block;
   margin: 0 10px;
   font-size: 1.3rem;
@@ -385,7 +384,7 @@ nav ul li a:hover {
 }
 
 .contact-form {
-  background-color: #151934;
+  background-color: #353d7f;
   color: #fff;
   padding: 40px 400px;
   text-align: center;
@@ -409,13 +408,15 @@ nav ul li a:hover {
   color: #fff;
 }
 
-.form-group input, .form-group select, .form-group textarea {
+.form-group input,
+.form-group select,
+.form-group textarea {
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 1rem;
-  background-color: #2e3b55;
+  background-color: #353d7f;
   color: #fff;
 }
 
@@ -424,7 +425,7 @@ nav ul li a:hover {
 }
 
 button {
-  background-color: #5e65bc;
+  background-color: #353d7f;
   color: #fff;
   padding: 10px 20px;
   font-size: 1.2rem;
@@ -467,21 +468,18 @@ button:hover {
   background-color: #4a557a;
 }
 
-
-
 .footer {
-    background-color: #5e65bc;
-    color: #fff;
-    padding:  0;  /* Remove padding lateral, deixando apenas o padding vertical */
-    margin: 0;
-    width: 100%;  /* Garante que o rodapé ocupe toda a largura da tela */
+  background-color: #5e65bc;
+  color: #fff;
+  padding: 0; /* Remove padding lateral, deixando apenas o padding vertical */
+  margin: 0;
+  width: 100%; /* Garante que o rodapé ocupe toda a largura da tela */
 }
 .footer .container {
   max-width: 1200px; /* Defina um limite máximo de largura */
   margin: 0 auto; /* Centraliza o container */
   padding: 0 20px; /* Espaçamento interno */
 }
-
 
 .footer-content {
   display: flex;
@@ -491,25 +489,22 @@ button:hover {
   padding: 0px 20px; /* Adiciona espaçamento nas laterais */
 }
 
-
-
 .footer-logo {
-    display: flex;
-    align-items: center; /* Alinha o texto e o logo verticalmente */
-    gap: 10px; /* Espaço entre a imagem do logo e o texto */
-    font-size: 1.0rem;
-
+  display: flex;
+  align-items: center; /* Alinha o texto e o logo verticalmente */
+  gap: 10px; /* Espaço entre a imagem do logo e o texto */
+  font-size: 1rem;
 }
 
 .footer-socials {
-    display: flex;
-    gap: 15px; /* Espaço entre os ícones sociais */
+  display: flex;
+  gap: 15px; /* Espaço entre os ícones sociais */
 }
 
 .footer-socials a {
-    color: #fff;
-    font-size: 1.5rem;
-    text-decoration: none;
+  color: #fff;
+  font-size: 1.5rem;
+  text-decoration: none;
 }
 
 .footer-logo-img {
@@ -542,7 +537,7 @@ button:hover {
 }
 
 .footer-socials a i {
-    font-size: 1.8rem; /* Tamanho do ícone */
+  font-size: 1.8rem; /* Tamanho do ícone */
 }
 
 .social-link {
@@ -566,7 +561,9 @@ button:hover {
   box-sizing: border-box;
   position: relative;
   left: 50%; /* Centraliza o conteúdo */
-  transform: translateX(-50%); /* Garante que o conteúdo comece na borda esquerda */
+  transform: translateX(
+    -50%
+  ); /* Garante que o conteúdo comece na borda esquerda */
 }
 
 .footer-copyright p {
@@ -644,13 +641,22 @@ button:hover {
 
   /* Sessão Escritórios */
   .office-details {
+    display: flex;
     flex-direction: column; /* Empilha os detalhes e o mapa */
     text-align: center;
   }
 
-  .office-info, .map {
+  .office-info,
+  .map {
     width: 100%; /* Ocupa 100% da largura */
+    margin: 0; /* Remove margens externas */
+    padding: 0; /* Remove espaçamentos internos */
   }
+
+  /* Para adicionar um pequeno espaçamento entre os elementos, pode-se ajustar o padding */
+.office-info {
+  margin-bottom: 2px; /* Ajusta o espaçamento entre as divs */
+}
 
   /* Formulário de Contato */
   .contact-form {
