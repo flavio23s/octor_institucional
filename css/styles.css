@@ -6,6 +6,8 @@ html, body {
   width: 100%;
   overflow-x: hidden; /* Evita rolagem horizontal */
   box-sizing: border-box;
+  font-family: 'Madani Arabic Regular', sans-serif;
+  line-height: 1.6;
 }
 
 @font-face {
@@ -18,12 +20,6 @@ html, body {
     font-style: normal;
 }
 
-body {
-    font-family: 'Madani Arabic Regular', sans-serif;
-    line-height: 1.6;
-
-}
-
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -32,8 +28,8 @@ body {
 
 /*cabeçalho*/
 header {
-  background-color: #151934;
-  padding: 20px 0;
+  padding: 10px 0;
+  background:rgba(0, 0, 0, 0.2)
 }
 
 .header-container {
@@ -70,7 +66,7 @@ nav ul {
 nav ul li a {
   color: #fff;
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 
 nav ul li a:hover {
@@ -78,6 +74,7 @@ nav ul li a:hover {
 }
 
 .hero {
+  margin-top: -8%;
   position: relative;
   width: 100%;
   height: 100vh; /* O vídeo vai preencher toda a altura da tela */
@@ -129,11 +126,11 @@ nav ul li a:hover {
 
 /* Nosso ecossistema */
 .media-brands {
-  background: #151934;
+  background: #31329a ;
   color: #650c87;
-  padding: 40px 0;
+  padding-top: 20px;
   text-align: center;
-  padding-bottom: 80px;
+  padding-bottom: 100px;
 }
 
 .media-brands h2 {
@@ -159,7 +156,7 @@ nav ul li a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #151934;
+  background-color: #31329a;
   border: 2px solid #fff;
   transform: rotate(45deg); /* Rotaciona para criar o efeito de losango */
   overflow: hidden;
@@ -180,7 +177,6 @@ nav ul li a:hover {
 }
 
 .brand-item .back {
-  background-color: #fff; /* Fundo branco para a parte de trás */
   transform: rotateY(180deg) rotate(-45deg); /* Esconde o verso por padrão */
   border-radius: 5px; /* Garante que o fundo cubra toda a área de rotação */
 }
@@ -200,6 +196,11 @@ nav ul li a:hover {
   height: auto;
 }
 
+.back img {
+  transform: rotate(45deg); /* Rotaciona para criar o efeito de losango */
+  width: 100%;
+  height: auto;
+}
 /* Popup */
 /* Ajustes gerais */
 .popup {
@@ -314,7 +315,7 @@ nav ul li a:hover {
 
 
 .offices {
-  background: linear-gradient(to bottom, #2e3b55 20%, #151934 80%); /* Centraliza o efeito mais no topo */
+  background: #31329a ; /* Centraliza o efeito mais no topo */
   color: #fff;
   padding: 40px 20px;
   text-align: center;
@@ -375,14 +376,11 @@ nav ul li a:hover {
   filter: brightness(1); /* Faz o mapa retornar à cor original ao passar o mouse */
 }
 
-.locations {
-  margin-bottom: 30px;
-}
 
 .continents span, .countries span {
   display: inline-block;
   margin: 0 10px;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   cursor: pointer;
 }
 
@@ -490,7 +488,7 @@ button:hover {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 10px 20px; /* Adiciona espaçamento nas laterais */
+  padding: 0px 20px; /* Adiciona espaçamento nas laterais */
 }
 
 
