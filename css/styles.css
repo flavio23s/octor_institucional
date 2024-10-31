@@ -26,6 +26,8 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px; /* Certifique-se de que o padding não está causando overflow */
+  position: relative;
+  z-index: 2; /* Garante que o conteúdo fique por cima da imagem */
 }
 
 /*cabeçalho*/
@@ -133,9 +135,14 @@ nav ul li a:hover {
 .media-brands {
   background: #353d7f ;
   color: #353D7F;
-  padding-top: 20px;
+  padding-top: 0px;
   text-align: center;
   padding-bottom: 100px;
+}
+
+.efeito-luz {
+  margin-top: -250px;
+  margin-bottom: -150px;
 }
 
 .media-brands h2 {
@@ -325,11 +332,6 @@ nav ul li a:hover {
   text-align: center;
   position: relative;
   overflow: hidden;
-}
-
-.container {
-  position: relative;
-  z-index: 2; /* Garante que o conteúdo fique por cima da imagem */
 }
 
 .offices h2 {
@@ -669,20 +671,20 @@ button:hover {
     justify-content: center;
     margin-top: -18%;
   }
-
-  .footer-content {
-    display: flex;
-    flex-direction: column;
-  }
   
   .footer-socials {
     display: flex;
     justify-content: space-between;
   }
 
+  .efeito-luz img {
+    width: 350px;
+  }
+
   .footer-content {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     width: 100%;
     padding: 0px 20px; /* Adiciona espaçamento nas laterais */
