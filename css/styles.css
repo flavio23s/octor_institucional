@@ -501,12 +501,12 @@ button:hover {
   font-size: 1rem;
 }
 
-.footer-socials {
+.footer-socials, .footer-socials-header {
   display: flex;
   gap: 15px; /* Espaço entre os ícones sociais */
 }
 
-.footer-socials a {
+.footer-socials, .footer-socials-header a {
   color: #fff;
   font-size: 1.5rem;
   text-decoration: none;
@@ -541,7 +541,7 @@ button:hover {
   color: #e0e0e0;
 }
 
-.footer-socials a i {
+.footer-socials, .footer-socials-header a i {
   font-size: 1.8rem; /* Tamanho do ícone */
 }
 
@@ -596,11 +596,17 @@ button:hover {
     display: flex;
   }
 
+  header {
+    background-color: #353D7F;
+    margin: 0%;
+    padding: 10px 0;
+  }
+
   .navigation {
     display: none;
   }
 
-  .footer-socials {
+  .footer-socials-header {
     display: none;
   }
 
@@ -663,4 +669,10 @@ button:hover {
     justify-content: center;
     margin-top: -18%;
   }
+
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+  }
+  
 }
