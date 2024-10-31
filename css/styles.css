@@ -108,6 +108,9 @@ nav ul li a:hover {
   pointer-events: none; /* Desativa a interação do usuário com o vídeo */
 }
 
+.mobile-container {
+  display: none;
+}
 .hero-content {
   position: relative;
   z-index: 1;
@@ -582,7 +585,7 @@ button:hover {
   color: #e0e0e0;
 }
 
-@media screen {
+@media (max-width: 768px)  {
   body {
     margin: 0;
     padding: 0%;
@@ -590,6 +593,14 @@ button:hover {
 
   section {
     display: flex;
+  }
+
+  .navigation {
+    display: none;
+  }
+
+  .footer-socials {
+    display: none;
   }
 
   .hero {
@@ -604,7 +615,7 @@ button:hover {
     color: #fff;
   }
   
-  .video-container-mobile {
+  .mobile-container {
     position: absolute;
     top: 0;
     left: 0;
@@ -614,7 +625,7 @@ button:hover {
     overflow: hidden;
   }
   
-  .video-container-mobile iframe {
+  .mobile-container iframe {
     position: absolute;
     top: 50%;
     left: 50%;
