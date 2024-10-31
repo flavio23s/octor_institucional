@@ -21,6 +21,8 @@ body {
 }
 
 .container {
+  display: flex;
+  flex-direction: column;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px; /* Certifique-se de que o padding não está causando overflow */
@@ -386,7 +388,6 @@ nav ul li a:hover {
 .contact-form {
   background-color: #353d7f;
   color: #fff;
-  padding: 40px 400px;
   text-align: center;
 }
 
@@ -581,136 +582,65 @@ button:hover {
   color: #e0e0e0;
 }
 
-@media screen and (max-width: 768px) {
-  /* Ajustes gerais para mobile */
+@media screen {
   body {
-    font-size: 18px; /* Ajusta o tamanho da fonte para dispositivos móveis */
+    margin: 0;
+    padding: 0%;
   }
 
-  /* Cabeçalho */
-  .header-container {
-    flex-direction: column; /* Empilha os itens do cabeçalho */
-    padding: 10px 20px; /* Reduz o espaçamento */
-  }
-
-  .logo a {
-    font-size: 1.2rem; /* Reduz o tamanho da logo */
-  }
-
-  nav ul {
-    flex-direction: column; /* Navegação vertical */
-    gap: 10px; /* Reduz o espaçamento entre os itens */
-    margin-top: 10px; /* Adiciona espaçamento entre o logo e o menu */
-  }
-
-  /* Hero Section */
-  .hero-content h1 {
-    font-size: 2rem; /* Reduz o tamanho da fonte no mobile */
-  }
-
-  .hero-content p {
-    font-size: 1.3rem; /* Reduz o tamanho do parágrafo */
-  }
-
-  /* Container do vídeo */
-  .video-container iframe {
-    width: 100%; /* Garante que o vídeo se ajuste ao tamanho da tela */
-    height: 100%; /* Mantém a proporção 16:9 */
-  }
-
-  /* Sessão Nosso Ecossistema */
-  .media-brands h2 {
-    font-size: 1.5rem; /* Reduz o tamanho do título */
-  }
-
-  .brand-grid-line-01,
-  .brand-grid-line-02,
-  .brand-grid-line-03 {
-    flex-wrap: wrap; /* Permite que os itens se ajustem em múltiplas linhas */
-    gap: 20px; /* Reduz o espaçamento entre os itens */
-  }
-
-  .brand-item {
-    width: 80px; /* Reduz o tamanho dos losangos */
-    height: 80px;
-  }
-
-  .brand-item img {
-    width: 60%; /* Ajusta o tamanho das imagens */
-  }
-
-  /* Sessão Escritórios */
-  .office-details {
+  section {
     display: flex;
-    flex-direction: column; /* Empilha os detalhes e o mapa */
+  }
+
+  .hero {
+    margin-top: -8%;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: #fff;
+  }
+  
+  .video-container-mobile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+  }
+  
+  .video-container-mobile iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 56.25vw;
+    min-height: 100vh;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 1;
     text-align: center;
+    padding: 20px;
   }
-
-  .office-info,
-  .map {
-    width: 100%; /* Ocupa 100% da largura */
-    margin: 0; /* Remove margens externas */
-    padding: 0; /* Remove espaçamentos internos */
-  }
-
-  /* Para adicionar um pequeno espaçamento entre os elementos, pode-se ajustar o padding */
-.office-info {
-  margin-bottom: 2px; /* Ajusta o espaçamento entre as divs */
-}
-
-  /* Formulário de Contato */
-  .contact-form {
-    padding: 20px; /* Reduz o padding lateral */
-  }
-
-  /* Rodapé */
-  .footer-content {
-    flex-direction: column; /* Empilha logo e ícones sociais */
-    text-align: center;
-    gap: 20px;
-  }
-
-  .footer-logo {
-    justify-content: center; /* Centraliza a logo */
-  }
-
-  .footer-socials {
-    justify-content: center; /* Centraliza os ícones sociais */
-  }
-}
-
-@media screen and (max-width: 480px) {
-  /* Ajustes adicionais para telas muito pequenas */
-
-  /* Cabeçalho */
-  .logo a {
-    font-size: 1rem; /* Reduz ainda mais o tamanho da logo */
-  }
-
-  /* Hero Section */
+  
   .hero-content h1 {
-    font-size: 1.8rem; /* Reduz o tamanho da fonte do título */
+    font-size: 3rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
   }
-
+  
   .hero-content p {
-    font-size: 0.9rem; /* Reduz o tamanho do parágrafo */
+    font-size: 1.2rem;
   }
-
-  /* Sessão Nosso Ecossistema */
-  .media-brands h2 {
-    font-size: 1.3rem; /* Reduz o tamanho do título */
-  }
-
-  .brand-item img {
-    width: 50%; /* Reduz o tamanho das imagens */
-  }
-
-  /* Rodapé */
-  .footer-content {
-    gap: 15px; /* Reduz o espaço entre os itens do rodapé */
-  }
-
-  .footer-copyright {
-    padding: 5px; /* Reduz o padding do copyright */
-  }
+  
+  
 }
