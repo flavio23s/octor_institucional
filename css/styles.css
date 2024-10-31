@@ -605,7 +605,7 @@ button:hover {
   }
 
   .hero {
-    margin-top: -8%;
+    margin-top: -18%;
     position: relative;
     width: 100%;
     height: 100vh;
@@ -635,8 +635,8 @@ button:hover {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 100%;
-    height: 56.25vw;
+    width: 100vw;
+    height: 100vw;
     min-height: 100vh;
     transform: translate(-50%, -50%);
     pointer-events: none;
@@ -659,5 +659,10 @@ button:hover {
     font-size: 1.2rem;
   }
   
+  .media-brands {
+    display: flex;
+    justify-content: center;
+    margin-top: -18%;
+  }
   
 }
