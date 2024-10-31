@@ -675,4 +675,17 @@ button:hover {
     flex-direction: column;
   }
   
+  .footer-socials {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0px 20px; /* Adiciona espaçamento nas laterais */
+    margin-bottom: 20px;
+  }
 }
