@@ -147,6 +147,7 @@ nav ul li a:hover {
   padding-top: 0px;
   text-align: center;
   padding-bottom: 100px;
+  position:static;
 }
 
 .efeito-luz {
@@ -373,11 +374,11 @@ nav ul li a:hover {
 }
 
 .map {
-  width: 45%; /* Ajusta o tamanho do mapa */
+  width: 100%; /* Ajusta o tamanho do mapa */
 }
 
 .map img {
-  width: 100%;
+  width: 150%;
   height: auto;
 }
 
@@ -495,6 +496,7 @@ button:hover {
   max-width: 1200px; /* Defina um limite máximo de largura */
   margin: 0 auto; /* Centraliza o container */
   padding: 0 20px; /* Espaçamento interno */
+  position: relative;
 }
 
 .footer-content {
@@ -709,6 +711,33 @@ button:hover {
 
   .efeito-luz img {
     width: 350px;
+  }
+
+  .contact-form {
+    display:block;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .offices {
+    margin: 0 0;
+    padding: 0;
+  }
+
+  .office-details {
+    display: flex;
+    justify-content:center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .office-details img {
+    position:static;
+    width: auto;
+    height: 350px;
+    margin: 0 0;
+    
   }
 
   .footer-content {
