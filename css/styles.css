@@ -77,6 +77,15 @@ nav ul li a:hover {
   color: #ccc; /* Cor ao passar o mouse */
 }
 
+/* Estilo do botão de menu */
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+  z-index: 5;
+}
+
 .hero {
   margin-top: -8%;
   position: relative;
@@ -605,12 +614,33 @@ button:hover {
   }
 
   .navigation {
-    display: none;
-  }
+    display: none; /* Esconde a navegação em dispositivos móveis */
+}
 
-  .footer-socials-header {
+.menu-toggle {
+    display: block; /* Mostra o botão de menu */
+}
+
+/* Mostra o menu quando ativado */
+.navigation.active {
+    display: block;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: #353D7F;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.navigation ul {
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-socials-header {
     display: none;
-  }
+}
 
   .hero {
     margin-top: -18%;

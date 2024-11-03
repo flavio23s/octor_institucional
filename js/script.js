@@ -24,3 +24,6 @@ function showPopup(title) {
     document.getElementById("popup").style.display = "none"; // Esconde o popup
   }
   
+  document.getElementById("menu-toggle").addEventListener("click", function () {
+    document.getElementById("navigation").classList.toggle("active");
+});
