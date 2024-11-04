@@ -140,6 +140,13 @@ nav ul li a:hover {
   font-size: 1.2rem;
 }
 
+.botão-whatsapp {
+  position: fixed;
+  bottom:10px;
+  right: 10px;
+
+  z-index: 5;
+}
 /* Nosso ecossistema */
 .media-brands {
   background: #353d7f ;
@@ -147,7 +154,6 @@ nav ul li a:hover {
   padding-top: 0px;
   text-align: center;
   padding-bottom: 100px;
-  position:static;
 }
 
 .efeito-luz {
@@ -162,6 +168,7 @@ nav ul li a:hover {
   padding-top: 50px;
   padding-bottom: 80px;
 }
+
 
 .brand-grid-line-01,
 .brand-grid-line-02,
@@ -353,10 +360,12 @@ nav ul li a:hover {
 
 .office-details {
   display: flex;
-  justify-content: space-between;
+  justify-content:space-around;
   align-items: center; /* Alinha verticalmente o texto e a imagem */
   text-align: left;
   margin-top: 20px;
+  gap: 250px;
+  padding: 40px;
 }
 
 .office-info {
@@ -378,7 +387,7 @@ nav ul li a:hover {
 }
 
 .map img {
-  width: 150%;
+  width: 80%;
   height: auto;
 }
 
